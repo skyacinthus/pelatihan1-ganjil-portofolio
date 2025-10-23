@@ -3,13 +3,14 @@ import { s3Storage } from "@payloadcms/storage-s3";
 import sharp from "sharp";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { buildConfig } from "payload";
+import { Project } from "./src/collections/projects";
 
 export default buildConfig({
   // If you'd like to use Rich Text, pass your editor here
   editor: lexicalEditor(),
 
   // Define and configure your collections in this array
-
+  collections: [Project],
   // Payload Secret
   secret: process.env.PAYLOAD_SECRET || "",
   // Untuk koneksi ke Database
@@ -29,7 +30,7 @@ export default buildConfig({
         media: {
           prefix: "custom-prefix",
           signedDownloads: {
-            shouldUseSignedURL: ({ collection, filename, req }) => {
+            shouldUseSignedURL: ({collection, filename, req}) => {
               return filename.endsWith(".mp4");
             },
           },

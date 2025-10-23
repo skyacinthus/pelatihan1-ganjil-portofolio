@@ -7,6 +7,7 @@ export default function Navbar() {
       <Link href="/" className= "hover:underline hover:text-pink-300 transition duration-200">Home</Link>
       <Link href="/about" className= "hover:underline hover:text-pink-300 transition duration-200">About</Link>
       <Link href="/projects" className= "hover:underline hover:text-pink-300 transition duration-200">Projects</Link>
+      <Link href="/contacts" className= "hover:underline hover:text-pink-300 transition duration-200">Contacts</Link>
     </nav>
   );
 }
