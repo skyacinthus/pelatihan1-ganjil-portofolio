@@ -4,7 +4,7 @@ export default function About() {
   return (
     <main className="flex flex-col items-center mt-20 text-center justify-center">
       <Image
-        src="/headshot_color.png"  alt="Salma Kamal" width={200} height={200} className="object-cover rounded-full shadow-lg"
+        src="/headshot_teal.png"  alt="Salma Kamal" width={200} height={200} className="object-cover rounded-full shadow-lg mb-4"
       />
       <h1 className="text-4xl md:text-5xl font-bold mb-4">About Me!</h1>
       <p className="max-w-screen md:max-w-xl text-gray-600">
