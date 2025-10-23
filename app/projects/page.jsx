@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import axios from "axios";
+axios.defaults.baseURL = "";
 
 export default function Projects() {
   const [data, setData] = useState(null);
@@ -8,7 +9,7 @@ export default function Projects() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/project");
+        const response = await axios.get("/api/project");
         setData(response.data.docs);
       } catch (error) {
         console.error("Error fetching projects:", error);
